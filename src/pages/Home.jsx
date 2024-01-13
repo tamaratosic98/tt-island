@@ -13,13 +13,13 @@ const Home = () => {
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
 
-    let screenPosition = [0, -6.5, -43];
+    let screenPosition = [-3, -6, -40];
     let rotation = [0.1, 4.7, 0];
 
     if (window.innerWidth < 768) {
-      screenScale = [0.01, 0.01, 0.01];
+      screenScale = [30, 30, 30];
     } else {
-      screenScale = [0.009, 0.009, 0.009];
+      screenScale = [25, 25, 25];
     }
 
     return [screenScale, screenPosition, rotation];
@@ -29,11 +29,11 @@ const Home = () => {
     let screenScale, screenPosition;
 
     if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
-      screenPosition = [0, -1.5, 0];
+      screenScale = [1, 1, 1];
+      screenPosition = [0, 1, 0];
     } else {
-      screenScale = [3, 3, 3];
-      screenPosition = [0, -4, -4];
+      screenScale = [2, 2, 2];
+      screenPosition = [0, 2, -4];
     }
 
     return [screenScale, screenPosition];
@@ -46,7 +46,7 @@ const Home = () => {
 
   return (
     <section className="w-full h-screen relative">
-      <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+      <div className="absolute top-20 left-0 right-0 z-10 flex items-center justify-center">
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
       <Canvas
@@ -56,8 +56,8 @@ const Home = () => {
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>
-          <directionalLight position={[10, 3, 6]} intensity={3} />
-          <ambientLight intensity={0.5} />
+          <directionalLight position={[-10, -20, 1]} intensity={3} />
+          <ambientLight intensity={1} />
           <hemisphereLight
             skyColor="#b1e1ff"
             groundColor="#000000"
@@ -73,8 +73,8 @@ const Home = () => {
             setCurrentStage={setCurrentStage}
           />
           <Plane
-            planeScale={planeScale}
-            planePosition={planePosition}
+            scale={planeScale}
+            position={planePosition}
             isRotating={isRotating}
             rotation={[0, 20, 0]}
           />
