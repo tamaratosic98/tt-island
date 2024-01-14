@@ -2,14 +2,17 @@ import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
 
+import Alert from "../components/Alert.jsx";
 import Dog from "../components/Dog.jsx";
 import Loader from "../components/Loader.jsx";
+import { useAlert } from "../hooks/useAlert.js";
 
 const Contact = () => {
   const formRef = useRef(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [isLoading, setIsLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("0|sitting_0");
+  const { alert, showAlert, hideAlert } = useAlert();
 
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
@@ -43,11 +46,20 @@ const Contact = () => {
       );
     } catch (err) {
       console.error(err);
+      showAlert({ text: "Something went wrong. Please try again later." });
     } finally {
       setIsLoading(false);
-      setForm({ name: "", email: "", message: "" });
       formRef.current.reset();
-      setCurrentAnimation("0|sitting_0");
+      setForm({ name: "", email: "", message: "" });
+
+      if (!alert.show) {
+        showAlert({ text: "Message sent successfully", type: "success" });
+      }
+
+      setTimeout(() => {
+        hideAlert();
+        setCurrentAnimation("0|sitting_0");
+      }, [3000]);
     }
   };
 
@@ -69,6 +81,7 @@ const Contact = () => {
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
+      {alert.show && <Alert {...alert} />}
       <div className="flex-1 min-w-[50%]">
         <h1 className="head-text">Get in touch</h1>
         <form
