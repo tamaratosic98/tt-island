@@ -80,7 +80,7 @@ const Contact = () => {
   const [dogScale, dogPosition] = adjustDogForScreenSize();
 
   return (
-    <section className="relative flex lg:flex-row flex-col max-container">
+    <section className="max-container flex lg:flex-row flex-col lg:h-screen">
       {alert.show && <Alert {...alert} />}
       <div className="flex-1 min-w-[50%]">
         <h1 className="head-text">Get in touch</h1>

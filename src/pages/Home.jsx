@@ -8,7 +8,7 @@ import Sky from "../models/Sky";
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
-  const [currentStage, setCurrentStage] = useState(1);
+  const [currentStage, setCurrentStage] = useState(null);
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
@@ -52,7 +52,7 @@ const Home = () => {
       <Canvas
         className={`w-full h-screen bg-transparent ${
           isRotating ? "cursor-grabbing" : "cursor-grab"
-        }`}
+        } items-center justify-center`}
         camera={{ near: 0.1, far: 1000 }}
       >
         <Suspense fallback={<Loader />}>

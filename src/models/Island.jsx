@@ -88,6 +88,10 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
     };
   }, [gl, handlePointerDown, handlePointerMove, handlePointerUp]);
 
+  useEffect(() => {
+    setCurrentStage(1);
+  }, []);
+
   useFrame(() => {
     if (!isRotating) {
       rotationSpeed.current *= dampingFactor;
@@ -107,19 +111,15 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
       switch (true) {
         case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:
           setCurrentStage(4);
-          console.log("tami 4");
           break;
-        case normalizedRotation >= 0.85 && normalizedRotation <= 1.3:
+        case normalizedRotation >= 1.3 && normalizedRotation <= 1.8:
           setCurrentStage(3);
-          console.log("tami 3");
           break;
-        case normalizedRotation >= 2.4 && normalizedRotation <= 2.6:
+        case normalizedRotation >= 3 && normalizedRotation <= 3.5:
           setCurrentStage(2);
-          console.log("tami 3");
           break;
         case normalizedRotation >= 4.25 && normalizedRotation <= 4.75:
           setCurrentStage(1);
-          console.log("tami 1");
           break;
         default:
           setCurrentStage(null);
