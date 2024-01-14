@@ -7,6 +7,8 @@ import {
   git,
   github,
   html,
+  ipsMobApp,
+  ipsNotifier,
   java,
   javascript,
   jest,
@@ -22,7 +24,6 @@ import {
 } from "../assets/icons";
 import { ctd, ipsEnergy, winestars } from "../assets/images";
 
-// Add more skills
 export const skills = [
   {
     imageUrl: git,
@@ -184,5 +185,39 @@ export const socialLinks = [
   },
 ];
 
-// IpsMalfunctionApp, IpsScheduler, IpsMobApp, ConnectTheDots, WineStars.rs, LostAndFoundDog
-export const projects = [];
+export const projects = [
+  {
+    name: "CTD.ai",
+    theme: "btn-back",
+    iconUrl: ctd,
+    link: "https://app.ctd.ai/invitation?code=9ac18a4e-a7c1-48fb-822b-00da74cbdded--tamara-tosic",
+    description:
+      "I actively contributed to developing Connect The Dots (CTD), implementing features like email inbox integration and other enhancements for a streamlined networking experience.",
+  },
+  {
+    name: "IPS-MobApp S",
+    description: "A React Native application",
+    theme: "btn-back",
+    iconUrl: ipsMobApp,
+    link: "https://apps.apple.com/us/app/ips-mobapp-s/id6443954470",
+    description:
+      "I played a key role in developing and maintaining features for the web, tablet, and mobile versions. Additionally, I actively contributed to optimizing the offline mode functionality of an app designed for global electrical power utility field crews.",
+  },
+  {
+    name: "IPS® Advanced Scheduling",
+    theme: "btn-back",
+    iconUrl: ipsMobApp,
+    description:
+      "I significantly contributed to this web-based application for simplifying work scheduling and dynamically assigning tasks based on resource availability. My role involved adding features, addressing user needs, and collaborating for a seamless and efficient scheduling experience.",
+    link: "https://www.ips-energy.com/en/products-solutions/ips-advanced-scheduling-module/",
+  },
+  {
+    name: "IPS-Notifier",
+    theme: "btn-back",
+    description:
+      "Single-handedly, I constructed this application from the ground up, ensuring compatibility with both iOS and Android. Its primary function revolves around on-site malfunction tracking.",
+    iconUrl: ipsNotifier,
+    link: "https://apps.apple.com/us/app/ips-notifier/id6446323860",
+  },
+  // { name: "LostAndFoundDog", theme: "btn-back-blue" },
+];
