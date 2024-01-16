@@ -131,7 +131,7 @@ export const experiences = [
       "<strong>Independently</strong> developed a React Native mobile app from scratch, to address malfunctions in machines used by workers in the fields.",
       "Designed custom mobile app interfaces and features for each company that purchased the application, tailored to their specific needs and branding.",
       "Troubleshooting and resolving technical issues promptly to minimize disruptions and maintain a positive user experience.",
-      "Mentoring and providing guidance to a junior team member to foster skill development and growth.",
+      "Mentoring and providing guidance to a junior team member.",
     ],
   },
   {
@@ -142,13 +142,12 @@ export const experiences = [
     iconBg: "#ffffff",
     date: "December 2022 - Present",
     points: [
-      "Spearheaded development efforts at a <strong>dynamic startup</strong>, contributing to a fast-paced environment.",
-      "Utilized <strong>Vue.js</strong> to shape and enhance the application, showcasing adaptability and proficiency in modern frontend technologies",
-      "Collaborating with cross-functional teams to identify user requirements and design solutions that meet their needs.",
-      "Assumed <strong>code ownership</strong> within a year and conducted regular code reviews to ensure high coding standards.",
-      "Engineered the key feature that attracted the <strong>first client</strong>, highlighting a significant impact on the application's success.",
-      "Improved sign-up and sign-in flows, seamlessly integrating Microsoft and Google authorization endpoints.",
-      "Worked with <strong>Cypress</strong>, <strong>Vitest</strong> and <strong>Jest</strong> to thoroughly test new feature components, ensuring robust functionality and a seamless user experience.",
+      "Independently implemented over 20 new features using <strong>Vue.js</strong> contributing to a fast-paced startup environment.",
+      "Collaborated with cross-functional teams to identify user requirements and design solutions.",
+      "Assumed <strong>code ownership</strong> within a year, conducted regular code reviews to uphold high coding standards.",
+      "Engineered a key feature that attracted the <strong>first client</strong>, contributing to application success.",
+      "Improved sign-up/sign-in flows by integrating Microsoft and Google authorization endpoints seamlessly.",
+      "Utilized Cypress, Vitest and Jest for comprehensive testing, ensuring robust functionality and a smooth user experience.",
     ],
   },
   {

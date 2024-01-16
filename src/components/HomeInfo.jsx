@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const InfoBox = ({ children }) => (
   <div className="bg-white p-4 rounded-lg opacity-90 shadow-blue-200 text-gray-800 shadow-sm w-1/2 lg:w-1/4 flex">
-    <p className="font-medium sm:text-lg text-center text-gray-800">
-      {children}
-    </p>
+    <div className="font-medium sm:text-lg text-center text-gray-800">
+      <>{children}</>
+    </div>
   </div>
 );
 

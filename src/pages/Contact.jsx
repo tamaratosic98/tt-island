@@ -118,7 +118,7 @@ const Contact = () => {
             />
           </label>
           <label className="text-black-500 font-semibold">
-            Your Message
+            Message
             <textarea
               name="message"
               rows={4}
