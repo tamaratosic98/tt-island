@@ -22,7 +22,8 @@
     "react-dom": "^18.2.0",
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^6.21.2",
-    "react-vertical-timeline-component": "^3.6.0"
+    "react-vertical-timeline-component": "^3.6.0",
+    "vite-plugin-compression": "^0.5.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
