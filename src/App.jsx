@@ -6,7 +6,11 @@ const App = () => {
   console.log(process.env.PUBLIC_URL);
   return (
     <main className="bg-slate-300/20 h-full">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter
+        basename={
+          process.env.PUBLIC_URL || "https://tamaratosic98.github.io/tt-island"
+        }
+      >
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Home />} />
