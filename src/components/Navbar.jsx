@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <header className="header">
       <NavLink
-        to="/"
+        to="/tt-island"
         className="w-10 h-10 rounded-lg bg-white flex items-center justify-center font-bold shadow-md"
       >
         <p className="blue-gradient_text">TT</p>
