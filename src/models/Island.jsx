@@ -4,7 +4,6 @@ import { useGLTF } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 
 import { useFrame, useThree } from "@react-three/fiber";
-// import islandScene from "../assets/3d/island.glb";
 import newIslandScene from "../assets/3d/newIsland.glb";
 
 const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
@@ -13,7 +12,6 @@ const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   const rotationSpeed = useRef(0);
   const dampingFactor = 0.95;
   const { gl, viewport } = useThree();
-  // const { nodes, materials } = useGLTF(islandScene);
   const { nodes, materials } = useGLTF(newIslandScene);
 
   const handlePointerDown = (e) => {
