@@ -8,7 +8,7 @@ const App = () => {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Navbar />
         <Routes>
-          <Route path="/" exact element={<Home />} />
+          <Route path="/tt-island" exact element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
